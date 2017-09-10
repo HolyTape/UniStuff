@@ -1,2 +1,2 @@
 # UniStuff
-testing123
+Rep for university projects and other things
