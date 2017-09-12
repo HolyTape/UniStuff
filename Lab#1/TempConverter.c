@@ -2,11 +2,12 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-int main()
+int main(int argc, char *argv[])
 {
 	float num;
 	char t;
-	scanf("%f", &num);
+    num = atof(argv[1]);
+    t = *argv[2];
 	while (getchar() != '\n') t = getchar();
 	if (t == 'K')
 	{
