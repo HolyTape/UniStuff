@@ -6,8 +6,8 @@ int main(int argc, char *argv[])
 {
 	float num;
 	char t;
-    num = atof(argv[1]);
-    t = *argv[2];
+	num = atof(argv[1]);
+	t = *argv[2];
 	while (getchar() != '\n') t = getchar();
 	if (t == 'K')
 	{
