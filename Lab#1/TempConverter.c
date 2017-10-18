@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
 
 int main(int argc, char *argv[])
 {
@@ -9,27 +8,42 @@ int main(int argc, char *argv[])
 	num = atof(argv[1]);
 	t = *argv[2];
 	while (getchar() != '\n') t = getchar();
-	if (t == 'K')
+	if ((t == 'K') && (argc == 2))
 	{
-		printf("%.2f%c%c\n", num-273.15, ' ', 'C');
-		printf("%.2f%c%c\n", ((num-273.15)*1.8+32), ' ', 'F');		
+	    if (num < 0) printf("invalid number");
+            else
+        {
+            printf("%.2f%c%c\n", num-273.15, ' ', 'C');
+            printf("%.2f%c%c\n", ((num-273.15)*1.8+32), ' ', 'F');
+        }
 	}
-	else if(t == 'F')
+	if((t == 'F') && (argc == 2))
 	{
-		printf("%.2f%c%c\n", (num-32)/1.8, ' ', 'C');
-		printf("%.2f%c%c\n", (num-32)/1.8+273.15, ' ', 'K');
+	    if (num < -459.67) printf("invalid number");
+            else
+        {
+            printf("%.2f%c%c\n", (num-32)/1.8, ' ', 'C');
+            printf("%.2f%c%c\n", (num-32)/1.8+273.15, ' ', 'K');
+        }
 	}
-	else if (t == 'C')
+	if ((t == 'C') | (argc != 2))
 	{
-		printf("%.2f%c%c\n", (num*1.8+32), ' ', 'F');
-		printf("%.2f%c%c\n", num+273.15, ' ', 'K');
+	    if (num < -273.15) printf("invalid number");
+            else
+        {
+            printf("%.2f%c%c\n", (num*1.8+32), ' ', 'F');
+            printf("%.2f%c%c\n", num+273.15, ' ', 'K');
+        }
 	}
-	else if (t != 'K' && t != 'F')
+
+}
+
+	
+	/*else if (t != 'K' && t != 'F')
 	{
 		printf("%.2f%c%c\n", num, ' ', 'C');
 		printf("%.2f%c%c\n", (num*1.8+32), ' ', 'F');
 		printf("%.2f%c%c\n", num+273.15, ' ', 'K');
-	}
-	
-}
+	}*/
+
 
