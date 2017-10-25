@@ -24,3 +24,26 @@ int main()
     return 0;
 }
 
+/*int main()
+{
+    char a = 4;
+    char c1 = 0x01,
+         c2 = 0x02,
+         c3 = 0x04,
+         c4 = 0x08,
+         c5 = 0x10,
+         c6 = 0x20,
+         c7 = 0x40,
+         c8 = 0x80;
+    printf("a = %d\nfirst rightmost bit position: ", a);
+    if (a & c1) printf("1 ");
+        else if (a & c2) printf("2 ");
+            else if (a & c3) printf("3 ");
+                else if (a & c4) printf("4 ");
+                    else if (a & c5) printf("5 ");
+                        else if (a & c6) printf("6 ");
+                            else if (a & c7) printf("7 ");
+                                else if (a & c8) printf("8 ");
+                                    else printf("no filled bits");
+    return 0;
+}*/
