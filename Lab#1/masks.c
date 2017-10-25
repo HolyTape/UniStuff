@@ -12,7 +12,6 @@ int main()
          c6 = 0x20,
          c7 = 0x40,
          c8 = 0x80;
-    char m;
     printf("a = %d\na = ", a);
     (a & c1)? printf("c1 ") : printf("");
     (a & c2)? printf("c2 ") : printf("");
