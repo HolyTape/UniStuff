@@ -97,4 +97,24 @@ int main()
      }
      printf("%X", num);
  }
+ int main()
+{
+
+     unsigned int c_a = 0xAC001BED;
+     unsigned int c_b = 0x00000001;
+     unsigned int c_c = 0x80000000;
+     int i;
+     printf("%X\n", c_a);
+     for (i = 31; i>=0; i--)
+     {
+         (c_a & c_c) ? printf("1") : printf("0");
+         c_c = c_c >> 1;
+     }
+     printf("\n");
+     for (i = 31; i>=0; i--)
+     {
+         (c_a & c_b) ? printf("1") : printf("0");
+         c_b = c_b << 1;
+     }
+ }
 */
