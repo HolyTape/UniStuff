@@ -82,4 +82,19 @@ int main()
     }
 
     return 0;
-}*/
+}
+ int main()
+ {
+     int c_a = 0xAC001BED;
+     int c_b = 0x0000000F;
+     int num = 0x00000000;
+     int i;
+     printf("%X\n", c_a);
+     for (i = 28; i>=0; i-=4)
+     {
+         num = num | ((c_a & c_b) << i);
+         c_a = c_a >> 4;
+     }
+     printf("%X", num);
+ }
+*/
